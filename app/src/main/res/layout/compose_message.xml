@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:hint="@string/phone_number_hint"
+            android:nextFocusDown="@+id/message_body"
+            android:layout_alignParentLeft="true"/>
+
+    <EditText
+            android:id="@+id/message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:hint="@string/message_body_hint"
+            android:lines="3"
+            android:maxLength="@integer/message_body_max_length"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/send_message"/>
+
+    <TextView
+            android:id="@+id/remaining_characters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remaining_characters_text"
+            android:layout_above="@+id/send_message"
+            android:layout_toRightOf="@id/message_body"/>
+
+    <Button
+            android:id="@+id/send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_message_text"
+            android:layout_alignBottom="@+id/message_body"
+            android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
