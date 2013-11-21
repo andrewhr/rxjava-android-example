@@ -1,0 +1,4 @@
+language: android
+before_script:
+  - ./ci/wait_for_emulator
+  - adb shell input keyevent 82 &
